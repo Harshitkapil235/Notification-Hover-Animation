@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+button{
+    width: 60px;
+    height: 60px;
+    margin: 50px;
+    margin-bottom: 70px;
+    background-color: rgb(2, 249, 2);
+    border-radius: 50%;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+button::after,
+button::before{
+    content: ' ';
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(26, 2, 244);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+button i{
+    font-size: 24px;
+}
+
+button:hover::before{
+    animation: notify 2s ease-out infinite;
+}
+button:hover::after{
+    animation: notify 2s 1s ease-out infinite;
+}
+
+/* button::before{
+    animation: notify 2s ease-out 1;
+}
+button::after{
+    animation: notify 2s 1s ease-out 1;
+} */
+
+@keyframes notify {
+    100%{
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+</style>
+<body>
+    <button class="btn-ani"><i class="fa fa-bell" aria-hidden="true"></i></button>
+
+</body>
+</html>
